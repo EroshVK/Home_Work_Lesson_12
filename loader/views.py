@@ -6,6 +6,7 @@ import logging
 loader_blueprint = Blueprint('loader_blueprint', __name__, template_folder='templates')
 logging.basicConfig(filename='basic.log', level=logging.INFO)
 
+
 @loader_blueprint.route('/post')
 def create_new_post_page():
     return render_template('post_form.html')
@@ -28,4 +29,4 @@ def create_new_post():
     new_post = {'pic': picture_path, 'content': content}
     post_handler.add_post(new_post)
 
-    return render_template('post_uploaded.html', picture=picture, content=content)
+    return render_template('post_uploaded.html', picture=picture_path, content=content)

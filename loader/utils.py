@@ -5,5 +5,5 @@ def save_picture(picture):
     if file_type not in ('jpeg', 'svg', 'bmp', 'jpg'):
         return
 
-    picture.save(f'./uploads/{filename}')
-    return f'uploads/{filename}'
+    picture.save(f'./uploads/images/{filename}')
+    return f'uploads/images/{filename}'

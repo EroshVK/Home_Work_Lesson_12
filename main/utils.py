@@ -31,6 +31,4 @@ class PostHandler:
     def add_post(self, post):
         posts, error = self.load_posts()
         posts.append(post)
-        self.save_posts_to_json(posts)
-
-
+        self.save_post_to_json(posts)
